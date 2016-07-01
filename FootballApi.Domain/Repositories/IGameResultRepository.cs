@@ -7,7 +7,7 @@ using FootballApi.Domain.Models;
 
 namespace FootballApi.Domain.Repositories
 {
-    interface IGameRepository
+    public interface IGameResultRepository
     {
         List<GameResult> GetAll();
         List<GameResult> GetForGameWeek(int gameWeek);

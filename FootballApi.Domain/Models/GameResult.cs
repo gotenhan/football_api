@@ -6,7 +6,6 @@ namespace FootballApi.Domain.Models
 {
     public class GameResult
     {
-        [Key]
         public int? Id { get; set; }
 
         [Required]
