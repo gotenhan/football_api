@@ -9,7 +9,9 @@ namespace FootballApi.Domain.Repositories
 {
     interface IGameRepository
     {
-        List<Game> GetAll();
-        List<Game> GetForGameWeek(int gameWeek);
+        List<GameResult> GetAll();
+        List<GameResult> GetForGameWeek(int gameWeek);
+
+        void Store(GameResult gameResult);
     }
 }

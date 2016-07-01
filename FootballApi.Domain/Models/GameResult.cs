@@ -4,7 +4,7 @@ using DataAnnotationsExtensions;
 
 namespace FootballApi.Domain.Models
 {
-    public class Game
+    public class GameResult
     {
         [Key]
         public int? Id { get; set; }
@@ -14,7 +14,8 @@ namespace FootballApi.Domain.Models
         public int GameWeek { get; set; }
 
         [Required]
-        public string HomeTeamId { get; set; }
+        public string HomeTeamName { get; set; }
+
         [Required]
         public Team HomeTeam { get; set; }
 
