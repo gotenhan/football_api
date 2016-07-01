@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FootballApi.Domain.Models
 {
@@ -10,5 +7,13 @@ namespace FootballApi.Domain.Models
     {
         [Key, StringLength(200)]
         public string Name { get; set; }
+
+        public int Score { get; set; }
+        public int GamesPlayed { get; set; }
+        public int GoalsScored { get; set; }
+        public int GoalsLost { get; set; }
+
+        [NotMapped]
+        public int GoalsDifference => GoalsScored - GoalsDifference;
     }
 }
