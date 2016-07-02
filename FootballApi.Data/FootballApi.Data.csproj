@@ -56,6 +56,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AddGameResultUnitOfWork.cs" />
     <Compile Include="Repositories\GameResultRepository.cs" />
     <Compile Include="Repositories\TeamRepository.cs" />
   </ItemGroup>

@@ -132,6 +132,10 @@
     <Compile Include="Startup\WebApiConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FootballApi.Domain\FootballApi.Domain.csproj">
+      <Project>{8681a9b6-2815-4695-82f3-fb75c13bd073}</Project>
+      <Name>FootballApi.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FootballApi.Presentation\FootballApi.Presentation.csproj">
       <Project>{316C7EE4-7BB6-4951-93CE-836FCD4B0AE2}</Project>
       <Name>FootballApi.Presentation</Name>
