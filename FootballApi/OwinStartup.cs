@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.Web.Http;
 using FootballApi.Startup;
 using Microsoft.Owin;
 using Owin;
@@ -12,7 +13,9 @@ namespace FootballApi
     {
         public void Configuration(IAppBuilder app)
         {
-            WebApiConfiguration.Configure(app);
+            var httpConfiguration = new HttpConfiguration();
+            WebApiConfiguration.Configure(app, httpConfiguration);
+            IoCConfiguration.Configure(app, httpConfiguration);
         }
     }
 }

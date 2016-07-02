@@ -12,9 +12,8 @@ namespace FootballApi.Startup
 {
     public class WebApiConfiguration
     {
-        public static void Configure(IAppBuilder appBuilder)
+        public static void Configure(IAppBuilder appBuilder, HttpConfiguration httpConfiguration)
         {
-            var httpConfiguration = new HttpConfiguration();
             ConfigureJsonFormatter(httpConfiguration);
             MapRoutes(httpConfiguration);
             appBuilder.UseWebApi(httpConfiguration);
