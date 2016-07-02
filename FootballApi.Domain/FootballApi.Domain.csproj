@@ -47,6 +47,10 @@
       <HintPath>..\packages\DataAnnotationsExtensions.5.0.0.0\lib\net45\DataAnnotationsExtensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ExpressMapper, Version=1.8.1.0, Culture=neutral, PublicKeyToken=ac363faa09311ba0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Expressmapper.1.8.1\lib\net451\ExpressMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -65,13 +69,17 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyLocator.cs" />
     <Compile Include="Models\GameResult.cs" />
+    <Compile Include="Models\TableRow.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IGameResultRepository.cs" />
     <Compile Include="Services\AddGameResultService.cs" />
     <Compile Include="Repositories\IAddGameResultUnitOfWork.cs" />
     <Compile Include="Repositories\ITeamRepository.cs" />
+    <Compile Include="Services\TableService.cs" />
+    <Compile Include="Mappers\TeamToTableRowMapperRegistration.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FootballApi.CrossCuting\FootballApi.CrossCuting.csproj">

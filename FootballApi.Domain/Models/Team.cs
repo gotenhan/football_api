@@ -18,6 +18,12 @@ namespace FootballApi.Domain.Models
         public int GoalsScored { get; set; }
         [Min(0)]
         public int GoalsLost { get; set; }
+        [Min(0)]
+        public int GamesWon { get; set; }
+        [Min(0)]
+        public int GamesLost { get; set; }
+        [Min(0)]
+        public int GamesDrawn { get; set; }
 
         public int GoalsDifference => GoalsScored - GoalsLost;
 

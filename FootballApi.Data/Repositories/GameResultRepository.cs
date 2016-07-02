@@ -18,11 +18,6 @@ namespace FootballApi.Data.Repositories
             _footballApiContext = footballApiContext;
         }
 
-        public List<GameResult> GetAll()
-        {
-            return _footballApiContext.GameResults.ToList();
-        }
-
         public List<GameResult> GetForGameWeek(int gameWeek)
         {
             return _footballApiContext.GameResults.Where(gr => gr.GameWeek == gameWeek).ToList();

@@ -19,6 +19,11 @@ namespace FootballApi.Data.Repositories
             _footballApiContext = footballApiContext;
         }
 
+        public List<Team> GetAll()
+        {
+            return _footballApiContext.Teams.AsNoTracking().ToList();
+        }
+
         public Team Get(string name)
         {
             var teams = _footballApiContext.Teams.ToArray();

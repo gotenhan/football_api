@@ -53,12 +53,18 @@ namespace FootballApi.Domain.Services
             if (gameResult.AwayGoals == gameResult.HomeGoals)
             {
                 homeTeam.Score++;
+                homeTeam.GamesDrawn++;
                 awayTeam.Score++;
+                awayTeam.GamesDrawn++;
             }
             else
             {
                 var winningTeam = gameResult.HomeGoals > gameResult.AwayGoals ? homeTeam : awayTeam;
-                winningTeam.Score++;
+                winningTeam.Score += 3;
+                winningTeam.GamesWon++;
+
+                var losingTeam = gameResult.HomeGoals < gameResult.AwayGoals ? homeTeam : awayTeam;
+                losingTeam.GamesLost++;
             }
         }
 

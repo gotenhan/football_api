@@ -30,6 +30,7 @@ namespace FootballApi.Startup
             container.Register<IAddGameResultService, AddGameResultService>();
             container.Register<IGameResultRepository, GameResultRepository>();
             container.Register<ITeamRepository, TeamRepository>();
+            container.Register<ITableService, TableService>();
 
             container.Verify();
 
