@@ -40,11 +40,9 @@ namespace FootballApi.Domain.Services
 
             UpdateGamesPlayed(homeTeam, awayTeam);
             UpdateGoals(gameResult, homeTeam, awayTeam);
-
             UpdatePoints(gameResult, homeTeam, awayTeam);
 
             _unitOfWork.GameResultRepository.Store(gameResult);
-
             _unitOfWork.SaveChanges();
         }
 

@@ -8,7 +8,7 @@ namespace FootballApi.Domain.Mappers
         public TeamToTableRowMapperRegistration()
         {
             ExpressMapper.Mapper.Register<Team, TableRow>()
-                .Member(tr => tr.GoalsAgainst, t => t.GoalsScored)
+                .Member(tr => tr.GoalsFor, t => t.GoalsScored)
                 .Member(tr => tr.GoalsAgainst, t => t.GoalsLost)
                 .Member(tr => tr.Points, t => t.Score)
                 .Member(tr => tr.Team, t => t.Name);

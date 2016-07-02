@@ -19,7 +19,6 @@ namespace FootballApi.Seed
             {
                 new Team("Arsenal"),
                 new Team("Aston Villa"),
-                new Team("AwayTeam"),
                 new Team("Bournemouth"),
                 new Team("Chelsea"),
                 new Team("Crystal Palace"),
