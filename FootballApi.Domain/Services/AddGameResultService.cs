@@ -42,6 +42,10 @@ namespace FootballApi.Domain.Services
             UpdateGoals(gameResult, homeTeam, awayTeam);
 
             UpdatePoints(gameResult, homeTeam, awayTeam);
+
+            _unitOfWork.GameResultRepository.Store(gameResult);
+
+            _unitOfWork.SaveChanges();
         }
 
         private static void UpdatePoints(GameResult gameResult, Team homeTeam, Team awayTeam)

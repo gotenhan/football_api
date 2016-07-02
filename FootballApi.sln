@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballApi.Presentation", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballApi.CrossCuting", "FootballApi.CrossCuting\FootballApi.CrossCuting.csproj", "{06F1316A-31F8-47F1-ACF6-EF8897B3DCAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballApi.Seed", "FootballApi.Seed\FootballApi.Seed.csproj", "{AAF13B51-2CD2-4E6B-9E02-0AE66B63D043}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{06F1316A-31F8-47F1-ACF6-EF8897B3DCAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06F1316A-31F8-47F1-ACF6-EF8897B3DCAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06F1316A-31F8-47F1-ACF6-EF8897B3DCAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF13B51-2CD2-4E6B-9E02-0AE66B63D043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF13B51-2CD2-4E6B-9E02-0AE66B63D043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF13B51-2CD2-4E6B-9E02-0AE66B63D043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF13B51-2CD2-4E6B-9E02-0AE66B63D043}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

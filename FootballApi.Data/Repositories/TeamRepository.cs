@@ -21,7 +21,9 @@ namespace FootballApi.Data.Repositories
 
         public Team Get(string name)
         {
-            return _footballApiContext.Teams.Find(name);
+            var teams = _footballApiContext.Teams.ToArray();
+            var team = _footballApiContext.Teams.Find(name);
+            return team;
         }
 
         public void Store(Team team)

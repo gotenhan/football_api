@@ -34,9 +34,12 @@ namespace FootballApi.Data.Repositories
 
         public void RollbackChanges()
         {
-            _transaction.Rollback();
-            _transaction.Dispose();
-            _transaction = null;
+            if (_transaction != null)
+            {
+                _transaction.Rollback();
+                _transaction.Dispose();
+                _transaction = null;
+            }
         }
 
         public void Dispose()

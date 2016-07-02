@@ -35,8 +35,8 @@ namespace FootballApi.Data.Repositories
                 throw new ArgumentException("Updating game result is not supported", nameof(gameResult));
             }
 
-            var homeTeam = _footballApiContext.Teams.Find(gameResult.HomeTeam);
-            var awayTeam = _footballApiContext.Teams.Find(gameResult.AwayTeam);
+            var homeTeam = _footballApiContext.Teams.Find(gameResult.HomeTeamName);
+            var awayTeam = _footballApiContext.Teams.Find(gameResult.AwayTeamName);
 
             if (homeTeam == null) throw new ArgumentException("Home team must exist in database");
             if (awayTeam == null) throw new ArgumentException("Away team must exist in database");
