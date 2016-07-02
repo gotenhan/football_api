@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace FootballApi.Domain
+namespace FootballApi.CrossCuting
 {
     public class FootballApiException:Exception
     {

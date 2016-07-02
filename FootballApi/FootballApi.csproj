@@ -43,6 +43,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExpressMapper, Version=1.8.1.0, Culture=neutral, PublicKeyToken=ac363faa09311ba0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Expressmapper.1.8.1\lib\net451\ExpressMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -128,10 +140,19 @@
     <Compile Include="Controllers\TableController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OwinStartup.cs" />
+    <Compile Include="Startup\ExpressMapperConfiguration.cs" />
     <Compile Include="Startup\IoCConfiguration.cs" />
     <Compile Include="Startup\WebApiConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FootballApi.CrossCuting\FootballApi.CrossCuting.csproj">
+      <Project>{06F1316A-31F8-47F1-ACF6-EF8897B3DCAA}</Project>
+      <Name>FootballApi.CrossCuting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FootballApi.Data\FootballApi.Data.csproj">
+      <Project>{0EFC74AF-23B0-4A37-AB3B-44B934CD1EC2}</Project>
+      <Name>FootballApi.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FootballApi.Domain\FootballApi.Domain.csproj">
       <Project>{8681a9b6-2815-4695-82f3-fb75c13bd073}</Project>
       <Name>FootballApi.Domain</Name>

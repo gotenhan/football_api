@@ -34,6 +34,10 @@
       <HintPath>..\packages\DataAnnotationsExtensions.5.0.0.0\lib\net45\DataAnnotationsExtensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ExpressMapper, Version=1.8.1.0, Culture=neutral, PublicKeyToken=ac363faa09311ba0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Expressmapper.1.8.1\lib\net451\ExpressMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
@@ -73,15 +77,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyLocator.cs" />
+    <Compile Include="Mappers\GameResultMapperRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\GameResultViewModel.cs" />
+    <Compile Include="ViewModels\PostGameResultViewModel.cs" />
     <Compile Include="ViewModels\TableRowViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Mappers\" />
+    <ProjectReference Include="..\FootballApi.CrossCuting\FootballApi.CrossCuting.csproj">
+      <Project>{06F1316A-31F8-47F1-ACF6-EF8897B3DCAA}</Project>
+      <Name>FootballApi.CrossCuting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FootballApi.Domain\FootballApi.Domain.csproj">
+      <Project>{8681a9b6-2815-4695-82f3-fb75c13bd073}</Project>
+      <Name>FootballApi.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,7 +9,7 @@ namespace FootballApi.Domain.Models
         public int? Id { get; set; }
 
         [Required]
-        [Min(0)]
+        [Min(0), Max(38)]
         public int GameWeek { get; set; }
 
         [Required]
@@ -30,5 +30,9 @@ namespace FootballApi.Domain.Models
         [Required]
         [Min(0)]
         public int AwayGoals { get; set; }
+
+        public GameResult()
+        {
+        }
     }
 }

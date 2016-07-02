@@ -65,7 +65,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FootballApiException.cs" />
     <Compile Include="Models\GameResult.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,7 +73,12 @@
     <Compile Include="Repositories\IAddGameResultUnitOfWork.cs" />
     <Compile Include="Repositories\ITeamRepository.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FootballApi.CrossCuting\FootballApi.CrossCuting.csproj">
+      <Project>{06F1316A-31F8-47F1-ACF6-EF8897B3DCAA}</Project>
+      <Name>FootballApi.CrossCuting</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

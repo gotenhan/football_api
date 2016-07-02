@@ -16,6 +16,7 @@ namespace FootballApi
             var httpConfiguration = new HttpConfiguration();
             WebApiConfiguration.Configure(app, httpConfiguration);
             IoCConfiguration.Configure(app, httpConfiguration);
+            ExpressMapperConfiguration.Configure();
         }
     }
 }

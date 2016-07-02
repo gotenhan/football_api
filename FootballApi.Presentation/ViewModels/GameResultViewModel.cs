@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
-using DataAnnotationsExtensions;
+﻿using System.Runtime.CompilerServices;
 
 namespace FootballApi.Presentation.ViewModels
 {
@@ -10,28 +8,10 @@ namespace FootballApi.Presentation.ViewModels
         public string AwayTeam { get; set; }
         public int HomeGoals { get; set; }
         public int AwayGoals { get; set; }
-        public string Result { get; set; }
-    }
 
-    public class PostGameResultViewModel
-    {
-        [Required]
-        [Min(0)]
-        public int GameWeek { get; set; }
+        public string Result => HomeGoals == AwayGoals
+            ? "Draw"
+            : (HomeGoals > AwayGoals ? "Home Win" : "Away Win");
 
-        [Required]
-        [StringLength(200)]
-        public string HomeTeam { get; set; }
-
-        [StringLength(200)]
-        public string AwayTeam { get; set; }
-
-        [Required]
-        [Min(0)]
-        public int HomeGoals { get; set; }
-
-        [Required]
-        [Min(0)]
-        public int AwayGoals { get; set; }
     }
 }

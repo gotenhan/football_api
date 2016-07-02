@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Web;
+using FootballApi.CrossCuting;
 using FootballApi.Domain.Models;
 using FootballApi.Domain.Repositories;
 
@@ -15,7 +16,7 @@ namespace FootballApi.Domain.Services
 
     public class UnknownTeamException : FootballApiException
     {
-        public UnknownTeamException(string teamName) : base(@"Team {teamName} does not exist")
+        public UnknownTeamException(string teamName) : base($"Team {teamName} does not exist")
         {
         }
     };

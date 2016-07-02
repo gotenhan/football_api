@@ -1,20 +1,23 @@
 ﻿using System;
 using System.Data;
 using System.Data.Entity;
-using FootballApi.Data;
+using FootballApi.Domain.Repositories;
 
-namespace FootballApi.Domain.Repositories
+namespace FootballApi.Data.Repositories
 {
     public class AddGameResultUnitOfWork : IAddGameResultUnitOfWork
     {
         private readonly FootballApiContext _footbalApiContext;
         private DbContextTransaction _transaction;
+
         public IGameResultRepository GameResultRepository { get; }
         public ITeamRepository TeamRepository { get; }
 
-        public AddGameResultUnitOfWork(FootballApiContext footbalApiContext)
+        public AddGameResultUnitOfWork(FootballApiContext footbalApiContext, IGameResultRepository gameResultRepository, ITeamRepository teamRepository)
         {
             _footbalApiContext = footbalApiContext;
+            GameResultRepository = gameResultRepository;
+            TeamRepository = teamRepository;
             _transaction = _footbalApiContext.Database.BeginTransaction(IsolationLevel.Serializable);
         }
 
