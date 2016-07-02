@@ -21,8 +21,6 @@ namespace FootballApi.Domain.Models
 
         public int GoalsDifference => GoalsScored - GoalsDifference;
 
-        //public virtual ICollection<GameResult> GameResults { get; set; } 
-
         public Team(string name)
         {
             Name = name;
